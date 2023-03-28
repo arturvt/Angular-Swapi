@@ -10,10 +10,10 @@
 <div class="content" role="main">
   <h1>Swapi App</h1>
   <p>Print below the 1st people from the API:</p>
-  <app-people></app-people>
+  <app-people  *ngIf="peopleList$ | async  as peopleList" [peopleList]="peopleList"></app-people>
 
   <h2>Planets</h2>
   <p>Show the planets below</p>
-  <app-planet></app-planet>
+  <app-planet  *ngIf="planetList$ | async  as planetList" [planetList]="planetList"></app-planet>
 
 </div>
