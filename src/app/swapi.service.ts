@@ -16,7 +16,7 @@ export interface Planet {
   providedIn: 'root',
 })
 export class SwapiService {
-  readonly baseUrl = 'https://swapi.dev/api';
+  readonly baseUrl = '/api';
   readonly peopleUrl = `${this.baseUrl}/people`;
   readonly planetsUrl = `${this.baseUrl}/planets`;
 

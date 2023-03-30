@@ -4,9 +4,10 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { PeopleComponent } from './components/people/people.component';
 import { PlanetComponent } from './components/planet/planet.component';
+import { HeaderComponent } from './header/header.component';
 
 @NgModule({
-  declarations: [AppComponent, PeopleComponent, PlanetComponent],
+  declarations: [AppComponent, PeopleComponent, PlanetComponent, HeaderComponent],
   imports: [BrowserModule, HttpClientModule],
   providers: [],
   bootstrap: [AppComponent],
