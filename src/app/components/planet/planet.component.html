@@ -1,9 +1,5 @@
 <div class="card-container">
-  <a class="card" target="_blank" rel="noopener">
-    <span>Planet 01</span>
-  </a>
-
-  <a class="card" target="_blank" rel="noopener">
-    <span>Planet 02</span>
+  <a class="card" target="_blank" rel="noopener" *ngFor="let planet of planetList">
+    <span>{{planet.name}} [{{planet.population | number  }}]</span>
   </a>
 </div>
