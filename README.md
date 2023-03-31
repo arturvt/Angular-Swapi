@@ -18,8 +18,12 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Assessment
 
-1. Peform a request to People API and Planets API.
+1. Peform a request to People API and Planets API. => get by ID
 2. Show the contents on the app:
    1. People: Name and Gender
    2. Planes: Name and Population
-3. Show the People and Planet only when BOTH requests are loaded.
+3. Now, request 02 people and 02 planets at the same time.
+   1. Ex: getPeople() returns => [people1, people2]
+4. Show the People and Planet only when BOTH requests are loaded.
+   1. ex: getData()
+      1. Returns {listOfPeople, listOfplanets}
