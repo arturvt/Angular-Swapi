@@ -1,11 +1,10 @@
 <app-header></app-header>
-<div class="content" role="main">
+<div class="content" role="main" *ngIf="data$ | async as data">
   <h1>Swapi App</h1>
   <p>Print below the 1st and 2nd people from SWAPI api</p>
-  <app-people  *ngIf="peopleList$ | async  as peopleList" [peopleList]="peopleList"></app-people>
+  <app-people [peopleList]="data.people"></app-people>
 
   <h2>Planets</h2>
   <p>Print below the 1st and 2nd planet from SWAPI api</p>
-  <app-planet  *ngIf="planetList$ | async  as planetList" [planetList]="planetList"></app-planet>
-
+  <app-planet [planetList]="data.planets"></app-planet>
 </div>

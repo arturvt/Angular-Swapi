@@ -12,6 +12,11 @@ export interface Planet {
   population: number;
 }
 
+export interface Data {
+  people: People[];
+  planets: Planet[];
+}
+
 @Injectable({
   providedIn: 'root',
 })
@@ -31,6 +36,12 @@ export class SwapiService {
   getPlanetsList(): Observable<Planet[]> {
     return combineLatest([this.getPlanets(1), this.getPlanets(2)]).pipe(
       map(([plane1, plane2]) => [plane1, plane2])
+    );
+  }
+
+  getData(): Observable<Data> {
+    return combineLatest([this.getPeopleList(), this.getPlanetsList()]).pipe(
+      map(([people, planets]) => ({ people, planets }))
     );
   }
 

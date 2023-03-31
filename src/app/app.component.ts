@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { People, Planet, SwapiService } from './swapi.service';
+import { Data, People, Planet, SwapiService } from './swapi.service';
 import { Observable } from 'rxjs';
 
 @Component({
@@ -9,9 +9,7 @@ import { Observable } from 'rxjs';
 })
 export class AppComponent implements OnInit {
   title = 'angular-swapi';
-
-  peopleList$: Observable<People[]> = this.swapiService.getPeopleList();
-  planetList$: Observable<Planet[]> = this.swapiService.getPlanetsList();
+  data$: Observable<Data> = this.swapiService.getData();
 
   constructor(private swapiService: SwapiService) {}
 
