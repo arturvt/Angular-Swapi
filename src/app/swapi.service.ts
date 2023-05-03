@@ -5,6 +5,7 @@ import { Observable, combineLatest, map } from 'rxjs';
 export interface People {
   name: string;
   gender: string;
+  homeworld: string;
 }
 
 export interface Planet {

@@ -1,10 +1,10 @@
 <app-header></app-header>
-<div class="content" role="main" *ngIf="data$ | async as data">
+<div class="container" role="main" *ngIf="data$ | async as data">
   <h1>Swapi App</h1>
-  <p>Print below the 1st and 2nd people from SWAPI api</p>
+  <h2>People</h2>
   <app-people [peopleList]="data.people"></app-people>
+  <hr aria-hidden="true">
 
   <h2>Planets</h2>
-  <p>Print below the 1st and 2nd planet from SWAPI api</p>
   <app-planet [planetList]="data.planets"></app-planet>
 </div>
