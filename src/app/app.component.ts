@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Data, SwapiService } from './swapi.service';
+import { SwapiService } from './service/swapi.service';
 import { Observable } from 'rxjs';
+import {Data} from "./service/model";
 
 @Component({
   selector: 'app-root',

@@ -1,32 +1,21 @@
-import { HttpClient } from '@angular/common/http';
-import { Injectable } from '@angular/core';
-import { Observable, combineLatest, map } from 'rxjs';
+import {HttpClient} from '@angular/common/http';
+import {Injectable} from '@angular/core';
+import {combineLatest, map, Observable} from 'rxjs';
+import {Data, People, Planet} from "./model";
+import {environment} from "../../environments/environment";
 
-export interface People {
-  name: string;
-  gender: string;
-  homeworld: string;
-}
-
-export interface Planet {
-  name: string;
-  population: number;
-}
-
-export interface Data {
-  people: People[];
-  planets: Planet[];
-}
 
 @Injectable({
   providedIn: 'root',
 })
 export class SwapiService {
-  readonly baseUrl = '/api';
-  readonly peopleUrl = `${this.baseUrl}/people`;
-  readonly planetsUrl = `${this.baseUrl}/planets`;
+  readonly host = environment.hostSWAPI;
+  readonly peopleUrl = `${this.host}people`;
+  readonly planetsUrl = `${this.host}planets`;
 
-  constructor(private httpClient: HttpClient) {}
+  constructor(private httpClient: HttpClient) {
+    console.table({host: this.host, planet: this.planetsUrl})
+  }
 
   getPeopleList(): Observable<People[]> {
     return combineLatest([this.getPeople(1), this.getPeople(2)]).pipe(
@@ -42,7 +31,7 @@ export class SwapiService {
 
   getData(): Observable<Data> {
     return combineLatest([this.getPeopleList(), this.getPlanetsList()]).pipe(
-      map(([people, planets]) => ({ people, planets }))
+      map(([people, planets]) => ({people, planets}))
     );
   }
 

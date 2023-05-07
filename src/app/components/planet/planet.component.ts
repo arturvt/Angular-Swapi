@@ -1,5 +1,6 @@
-import { Component, Input } from '@angular/core';
-import { Planet } from 'src/app/swapi.service';
+import {Component, Input} from '@angular/core';
+import {Planet} from "../../service/model";
+
 
 @Component({
   selector: 'app-planet',

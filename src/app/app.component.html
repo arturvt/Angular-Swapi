@@ -1,6 +1,5 @@
 <app-header></app-header>
-<div class="container" role="main" *ngIf="data$ | async as data">
-  <h1>Swapi App</h1>
+<div class="container" *ngIf="data$ | async as data">
   <h2>People</h2>
   <app-people [peopleList]="data.people"></app-people>
   <hr aria-hidden="true">
