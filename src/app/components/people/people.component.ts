@@ -1,5 +1,6 @@
-import { Component, Input } from '@angular/core';
-import { People } from 'src/app/swapi.service';
+import {Component, Input} from '@angular/core';
+import {People} from "../../service/model";
+
 
 @Component({
   selector: 'app-people',

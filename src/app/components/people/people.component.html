@@ -1,5 +1,9 @@
-<div class="card-container">
-  <a class="card" target="_blank" rel="noopener" *ngFor="let people of peopleList">
-    <span>{{people.name}} - {{people.gender}}</span>
-  </a>
+<div class="col-xs-12 col-lg-6 col-xl-4 margin-bottom-3" *ngFor="let people of peopleList">
+  <sdx-card [label]="people.name" label-aria-level="2" icon-name="icon-person">
+    <ul class="list single-line margin-0">
+      <li>Gender: {{people.gender}}</li>
+      <li class="list--link"><a href="{{people.homeworld}}">Homeworld</a></li>
+    </ul>
+  </sdx-card>
+
 </div>
