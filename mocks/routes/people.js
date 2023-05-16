@@ -2,7 +2,9 @@ const express = require('express');
 const router = express.Router();
 const { results } = require('../data/people.json');
 
-router.get('/', (_, res) => {
+router.get('/', (req, res) => {
+  let page = req.query.page;
+  console.log(`get page ${page}`);
   res.json({
     total: results.length,
     results

@@ -17,9 +17,11 @@ export class SwapiService {
   }
 
   getPeopleList(): Observable<People[]> {
-    return combineLatest([this.getPeople(1), this.getPeople(2)]).pipe(
-      map(([people1, people2]) => [people1, people2])
-    );
+    return combineLatest([
+      this.getPeople(0),
+      this.getPeople(1),
+      this.getPeople(2),
+    ]).pipe(map(([people0, people1, people2]) => [people0, people1, people2]));
   }
 
   getPlanetsList(): Observable<Planet[]> {
