@@ -1,7 +1,7 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { combineLatest, map, Observable } from 'rxjs';
-import {Data, People, PeopleResponse, Planet} from './model';
+import { People, PeopleResponse, Planet } from './model';
 import { environment } from '../../environments/environment';
 
 @Injectable({
@@ -12,26 +12,17 @@ export class SwapiService {
   readonly peopleUrl = `${this.host}/people`;
   readonly planetsUrl = `${this.host}/planets`;
 
-  constructor(private httpClient: HttpClient) {
-    console.table({ host: this.host, planet: this.planetsUrl });
-  }
+  constructor(private httpClient: HttpClient) {}
 
-  getPeopleList(): Observable<PeopleResponse> {
-    return this.httpClient.get<PeopleResponse>(this.peopleUrl);
+  getPeopleList(page: number): Observable<PeopleResponse> {
+    // Add safe, URL encoded search parameter if there is a search term
+    const options = page ? { params: new HttpParams().set('page', page) } : {};
+    return this.httpClient.get<PeopleResponse>(this.peopleUrl, options);
   }
 
   getPlanetsList(): Observable<Planet[]> {
-    return combineLatest([this.getPlanets(1), this.getPlanets(2)]).pipe(
-      map(([plane1, plane2]) => [plane1, plane2])
-    );
+    return combineLatest([this.getPlanets(1), this.getPlanets(2)]).pipe(map(([plane1, plane2]) => [plane1, plane2]));
   }
-
-  getData(): Observable<Data> {
-    return combineLatest([this.getPeopleList(), this.getPlanetsList()]).pipe(
-      map(([people, planets]) => ({ people, planets }))
-    );
-  }
-
 
   private getPeople(id: number): Observable<People> {
     return this.httpClient.get<People>(this.peopleUrl + `/${id}`);

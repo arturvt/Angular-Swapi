@@ -1,0 +1,14 @@
+<ng-container *ngIf="peopleResponse">
+  <div class="row flex-items">
+    <div class="col-xs-6 col-md-4 margin-bottom-3" *ngFor="let people of peopleContent">
+      <app-people [people]="people"></app-people>
+    </div>
+  </div>
+  <sdx-show-more
+    [incrementBy]="incrementBy"
+    [totalItems]="peopleResponse.count"
+    from-label="of"
+    more-label="Show 10 more"
+    (click)="showMore()"
+  />
+</ng-container>
