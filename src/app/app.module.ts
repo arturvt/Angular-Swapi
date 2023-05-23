@@ -6,16 +6,15 @@ import { AppComponent } from './app.component';
 import { PeopleComponent } from './components/people/people.component';
 import { PlanetComponent } from './components/planet/planet.component';
 import { HeaderComponent } from './header/header.component';
+import { TabsComponent } from './tabs/tabs.component';
+import { AppRoutingModule } from './app-routing.module';
+import { PeoplePageComponent } from './pages/people/people.page.component';
+import { PlanetPageComponent } from './pages/planet-page/planet-page.component';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    PeopleComponent,
-    PlanetComponent,
-    HeaderComponent,
-  ],
+  declarations: [AppComponent, PeopleComponent, PeoplePageComponent, PlanetComponent, TabsComponent, PlanetPageComponent, HeaderComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
-  imports: [BrowserModule, HttpClientModule],
+  imports: [BrowserModule, HttpClientModule, AppRoutingModule],
   providers: [],
   bootstrap: [AppComponent],
 })

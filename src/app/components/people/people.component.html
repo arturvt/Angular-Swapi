@@ -1,8 +1,6 @@
-<div class="margin-bottom-3" *ngFor="let people of peopleList">
-  <sdx-card [label]="people.name" label-aria-level="2" icon-name="icon-person">
-    <ul class="list single-line margin-0">
-      <li>Gender: {{people.gender}}</li>
-      <li class="list--link"><a href="{{people.homeworld}}">Homeworld</a></li>
-    </ul>
-  </sdx-card>
-</div>
+<sdx-card [label]="people.name" label-aria-level="2" icon-name="icon-person">
+  <ul class="list single-line margin-0">
+    <li>Gender: {{ people.gender }}</li>
+    <li class="list--link"><a href="{{ people.homeworld }}">Homeworld</a></li>
+  </ul>
+</sdx-card>

@@ -1,6 +1,5 @@
-import {Component, Input} from '@angular/core';
-import {People} from "../../service/model";
-
+import { Component, Input } from '@angular/core';
+import { People } from '../../service/model';
 
 @Component({
   selector: 'app-people',
@@ -8,5 +7,5 @@ import {People} from "../../service/model";
   styleUrls: ['./people.component.scss'],
 })
 export class PeopleComponent {
-  @Input() peopleList!: People[];
+  @Input() people!: People;
 }

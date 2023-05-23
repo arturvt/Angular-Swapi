@@ -1,20 +1,18 @@
-import { Component, OnInit } from '@angular/core';
-import { SwapiService } from './service/swapi.service';
-import { Observable } from 'rxjs';
-import {Data} from "./service/model";
+import { AfterViewInit, Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
 })
-export class AppComponent implements OnInit {
+export class AppComponent implements AfterViewInit {
   title = 'angular-swapi';
-  data$: Observable<Data> = this.swapiService.getData();
 
-  constructor(private swapiService: SwapiService) {}
-
-  ngOnInit() {
-    console.log('AppComponent.ngOnInit()');
+  ngAfterViewInit(): void {
+    console.log('[SWAPI]: Sending ready in 3 seconds');
+    setTimeout(() => {
+      console.log('[SWAPI]: Sending ready');
+      window.parent.postMessage({ type: 'ready', sender: 'subhub' }, '*');
+    }, 3000);
   }
 }

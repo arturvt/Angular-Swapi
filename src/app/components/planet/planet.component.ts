@@ -1,6 +1,5 @@
-import {Component, Input} from '@angular/core';
-import {Planet} from "../../service/model";
-
+import { Component, Input } from '@angular/core';
+import { Planet } from '../../service/model';
 
 @Component({
   selector: 'app-planet',

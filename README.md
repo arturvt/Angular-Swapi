@@ -27,6 +27,8 @@ You can find the project here: https://swapi-app-5f4ac.web.app/
   - [ ]  Planets
   - [ ]  Vehicles
   - [ ]  Starships
+- [ ]  Add states to prevent unecessary requests
+  - [ ]  Apply the isLoading flag so loader will be visible from app.component
 - [ ]  Use Firebase as Database
 - [ ]  Add Images
 - [ ]  Add Animations
@@ -34,5 +36,4 @@ You can find the project here: https://swapi-app-5f4ac.web.app/
   - [ ]  People
   - [ ]  Planets
   - [ ]  Films
-- [ ]  Add states to prevent unecessary requests
 - [ ] Try Angular Signals...

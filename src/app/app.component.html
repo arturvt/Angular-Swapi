@@ -1,17 +1,5 @@
 <app-header></app-header>
-<div class="container" *ngIf="data$ | async as data">
-  <h1>Swapi API content</h1>
-  <div class="row">
-    <div class="col-xs-12 col-md-6">
-      <h2>People</h2>
-      <app-people [peopleList]="data.people.results"></app-people>
-    </div>
-
-    <div class="col-xs-12 col-md-6">
-      <h2>Planets</h2>
-      <app-planet [planetList]="data.planets"></app-planet>
-    </div>
-
-  </div>
-
+<app-tabs></app-tabs>
+<div class="container">
+  <router-outlet></router-outlet>
 </div>

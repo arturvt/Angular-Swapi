@@ -10,7 +10,6 @@ const people_page_05 = require('../data/people/people-page-5.json');
 
 router.get('/', (req, res) => {
   let page = req.query.page;
-  console.log(`!get page ${page}`);
   switch (page) {
     case '5': return res.json(people_page_05);
     case '4': return res.json(people_page_04);
