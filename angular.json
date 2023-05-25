@@ -52,14 +52,9 @@
               "namedChunks": true,
               "assets": [
                 "src/favicon.ico",
-                "src/assets",
-                {
-                  "glob": "**/*",
-                  "input": "node_modules/@swisscom/sdx/dist/js/webcomponents/webcomponents/assets",
-                  "output": "assets"
-                }
+                "src/assets"
               ],
-              "styles": ["src/styles.scss", "node_modules/@swisscom/sdx/dist/css/webcomponents.css"],
+              "styles": ["src/styles.scss"],
               "fileReplacements": [
                 {
                   "replace": "src/environments/environment.ts",

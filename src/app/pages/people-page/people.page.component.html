@@ -1,7 +1,13 @@
 <ng-container *ngIf="peopleResponse">
   <div class="row flex-items">
     <div class="col-xs-6 col-md-4 margin-bottom-3" *ngFor="let people of peopleContent">
-      <app-people [people]="people"></app-people>
+      <sdx-card [label]="people.name" label-aria-level="2" icon-name="icon-person">
+        <ul class="list single-line margin-0">
+          <li>Gender: {{ people.gender }}</li>
+          <li class="list--link"><a href="{{ people.homeworld }}">Homeworld</a></li>
+        </ul>
+      </sdx-card>
+
     </div>
   </div>
   <sdx-show-more
