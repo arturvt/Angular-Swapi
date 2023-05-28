@@ -9,11 +9,12 @@ import { AppRoutingModule } from './app-routing.module';
 import { PeoplePageComponent } from './pages/people-page/people.page.component';
 import { PlanetPageComponent } from './pages/planet-page/planet-page.component';
 import { UtilPageComponent } from './pages/util-page/util-page.component';
+import { ButtonSignalComponent } from './components/button-signal.component';
 
 @NgModule({
   declarations: [AppComponent, PeoplePageComponent, TabsComponent, PlanetPageComponent, HeaderComponent, UtilPageComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
-  imports: [BrowserModule, HttpClientModule, AppRoutingModule],
+  imports: [BrowserModule, HttpClientModule, AppRoutingModule, ButtonSignalComponent],
   providers: [],
   bootstrap: [AppComponent],
 })
