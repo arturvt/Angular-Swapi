@@ -2,7 +2,7 @@ import { formatNumber } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { take } from 'rxjs';
 import { Planet, PlanetResponse } from 'src/app/service/model';
-import { SwapiService } from 'src/app/service/swapi.service';
+import { PlanetService } from '../../service/planet/planet.service';
 
 @Component({
   selector: 'app-planet-page',
@@ -10,7 +10,7 @@ import { SwapiService } from 'src/app/service/swapi.service';
   styleUrls: ['./planet-page.component.scss'],
 })
 export class PlanetPageComponent implements OnInit {
-  constructor(private swapiService: SwapiService) {}
+  constructor(private swapiService: PlanetService) {}
   private currentPage = 1;
   incrementBy = 0;
   planetResponse!: PlanetResponse;

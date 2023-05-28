@@ -1,0 +1,18 @@
+<div class="row margin-bottom-3--clear">
+  <div class="col-xs-12 col-lg-6 col-xl-4 margin-bottom-3" *ngFor="let film of films$ | async ">
+    <sdx-card
+      object-fit="none"
+      layout="interaction"
+      label-aria-level="3"
+      [imageSrc]="film.image"
+      label-aria-level="3"
+      href-label="+ Info"
+      [hrefLabel]="filmName(film)"
+      href="javascript:;"
+      [routerLink]="'/film/'+film.episodeId"
+      href-aria-label="Open new website."
+    >
+    </sdx-card>
+
+  </div>
+</div>

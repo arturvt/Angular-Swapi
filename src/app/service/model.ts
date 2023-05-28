@@ -22,7 +22,3 @@ export interface Planet {
   population: string;
 }
 
-export interface Data {
-  people: PeopleResponse;
-  planets: Planet[];
-}

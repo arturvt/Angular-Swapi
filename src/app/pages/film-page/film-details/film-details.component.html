@@ -1,0 +1,24 @@
+<h4 class="h4">Details</h4>
+<sdx-button-group layout="fullwidth">
+  <sdx-button theme="secondary" label="Return" routerLink="/film"></sdx-button>
+</sdx-button-group>
+<div class="row margin-bottom-3--clear">
+  <div class="col-xs-12 col-lg-6 col-xl-5 margin-bottom-3" *ngIf="film$ | async as film">
+    <sdx-card
+      [label]="film.title"
+      label-aria-level="3"
+      [imageSrc]="film.imageBanner"
+      image-alt="city panorama"
+      href="javascript:;"
+      href-aria-label="Open new website."
+    >
+      <ul class="list single-line">
+        <li>Release Date: {{film.releaseDate | relaseDayUntilNow}}</li>
+        <li>Director: {{film.director}}</li>
+      </ul>
+      <p>{{film.openingCrawl}}</p>
+    </sdx-card>
+
+  </div>
+
+</div>
