@@ -3,8 +3,6 @@ const router = express.Router();
 const films = require('../data/films/films-page1.json');
 
 router.get('/', (_, res) => {
-  console.log('get films');
-  console.log(films);
   return res.json(films);
 });
 

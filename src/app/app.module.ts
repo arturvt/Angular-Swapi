@@ -10,22 +10,41 @@ import { UtilPageComponent } from './pages/util-page/util-page.component';
 import { ButtonSignalComponent } from './components/button-signal.component';
 import { FilmPageComponent } from './pages/film-page/film-page.component';
 import { RouterModule, Routes } from '@angular/router';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FilmDetailsComponent } from './pages/film-page/film-details/film-details.component';
 import { RelaseDayUntilNowPipe } from './pages/film-page/film-details/pipe/relase-day-until-now.pipe';
 
 const routes: Routes = [
   { path: '', redirectTo: 'people', pathMatch: 'full' },
-  { path: 'people', title: 'Swapi - People', component: PeoplePageComponent },
-  { path: 'planet', title: 'Swapi - Planet', component: PlanetPageComponent },
+  {
+    path: 'people',
+    title: 'Swapi - People',
+    component: PeoplePageComponent,
+    data: {
+      animation: '1',
+    },
+  },
+  {
+    path: 'planet',
+    title: 'Swapi - Planet',
+    component: PlanetPageComponent,
+    data: { animation: '2' },
+  },
   {
     path: 'film',
     title: 'Swapi - Film',
+    data: { animation: '3' },
     children: [
       { path: '', component: FilmPageComponent },
       { path: ':episode_id', component: FilmDetailsComponent },
     ],
   },
-  { path: 'util', title: 'Swapi - Util', component: UtilPageComponent },
+  {
+    path: 'util',
+    title: 'Swapi - Util',
+    component: UtilPageComponent,
+    data: { animation: '4' },
+  },
 ];
 
 @NgModule({
@@ -41,7 +60,7 @@ const routes: Routes = [
     RelaseDayUntilNowPipe,
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
-  imports: [BrowserModule, HttpClientModule, RouterModule.forRoot(routes), ButtonSignalComponent],
+  imports: [BrowserModule, HttpClientModule, BrowserAnimationsModule, RouterModule.forRoot(routes), ButtonSignalComponent],
   providers: [],
   bootstrap: [AppComponent],
 })

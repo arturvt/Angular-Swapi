@@ -1,5 +1,5 @@
 <app-header></app-header>
-<app-tabs></app-tabs>
+<app-tabs (tabChange)="tabChanged($event)"></app-tabs>
 <div class="container">
   <router-outlet></router-outlet>
 </div>
