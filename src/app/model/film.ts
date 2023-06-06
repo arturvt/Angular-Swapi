@@ -15,8 +15,6 @@ export interface FilmContentResponse {
   starships: string[]; // Starship[]
   vehicles: string[]; // Vehicle[]
   species: string[]; // Species[]
-  created: string; // Date
-  edited: string; // Date
   url: string;
 }
 
@@ -32,8 +30,6 @@ export class Film {
   starships: string[]; // Starship[]
   vehicles: string[]; // Vehicle[]
   species: string[]; // Species[]
-  created: string; // Date
-  edited: string; // Date
   url: string;
   image: string;
   imageBanner: string;
@@ -50,8 +46,6 @@ export class Film {
     this.starships = filmResponse.starships;
     this.vehicles = filmResponse.vehicles;
     this.species = filmResponse.species;
-    this.created = filmResponse.created;
-    this.edited = filmResponse.edited;
     this.url = filmResponse.url;
     this.image = getImage(filmResponse.title);
     this.imageBanner = getImageBanner(filmResponse.title);

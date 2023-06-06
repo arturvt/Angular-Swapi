@@ -13,22 +13,28 @@ import { RouterModule, Routes } from '@angular/router';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FilmDetailsComponent } from './pages/film-page/film-details/film-details.component';
 import { RelaseDayUntilNowPipe } from './pages/film-page/film-details/pipe/relase-day-until-now.pipe';
+import { PeopleDetailsComponent } from './pages/people-page/people-details/people-details.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'people', pathMatch: 'full' },
   {
     path: 'people',
     title: 'Swapi - People',
-    component: PeoplePageComponent,
-    data: {
-      animation: '1',
-    },
+    children: [
+      {
+        path: '',
+        component: PeoplePageComponent,
+      },
+      {
+        path: ':id',
+        component: PeopleDetailsComponent,
+      },
+    ],
   },
   {
     path: 'planet',
     title: 'Swapi - Planet',
     component: PlanetPageComponent,
-    data: { animation: '2' },
   },
   {
     path: 'film',
@@ -43,7 +49,6 @@ const routes: Routes = [
     path: 'util',
     title: 'Swapi - Util',
     component: UtilPageComponent,
-    data: { animation: '4' },
   },
 ];
 
@@ -58,6 +63,7 @@ const routes: Routes = [
     FilmPageComponent,
     FilmDetailsComponent,
     RelaseDayUntilNowPipe,
+    PeopleDetailsComponent,
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   imports: [BrowserModule, HttpClientModule, BrowserAnimationsModule, RouterModule.forRoot(routes), ButtonSignalComponent],

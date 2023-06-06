@@ -1,13 +1,13 @@
 <ng-container *ngIf="peopleResponse">
   <div class="row flex-items">
     <div class="col-xs-6 col-md-4 margin-bottom-3" *ngFor="let people of peopleContent">
-      <sdx-card [label]="people.name" label-aria-level="2" icon-name="icon-person">
+      <sdx-card [label]="people.name" icon-name="icon-person" label-aria-level="2">
         <ul class="list single-line margin-0">
           <li>Gender: {{ people.gender }}</li>
-          <li class="list--link"><a href="{{ people.homeworld }}">Homeworld</a></li>
+          <li class="list--link"><a href="{{ people.homeWorld }}">Homeworld</a></li>
+          <li class="list--link"><a href="javascript:;" routerLink="/people/{{people.id}}">Details</a></li>
         </ul>
       </sdx-card>
-
     </div>
   </div>
   <sdx-show-more
@@ -16,5 +16,5 @@
     from-label="of"
     more-label="Show 10 more"
     (click)="showMore()"
-  />
+  ></sdx-show-more>
 </ng-container>

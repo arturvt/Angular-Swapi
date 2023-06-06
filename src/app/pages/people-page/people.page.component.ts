@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { take } from 'rxjs';
-import { People, PeopleResponse } from 'src/app/service/model';
+import { PeoplePageResponse, PeopleResponse } from 'src/app/service/model';
 import { PeopleService } from '../../service/people/people.service';
 
 @Component({
@@ -10,8 +10,8 @@ import { PeopleService } from '../../service/people/people.service';
 export class PeoplePageComponent implements OnInit {
   private currentPage = 1;
   incrementBy = 0;
-  peopleResponse!: PeopleResponse;
-  peopleContent: People[] = [];
+  peopleResponse!: PeoplePageResponse;
+  peopleContent: PeopleResponse[] = [];
 
   constructor(private swapiService: PeopleService) {}
 
