@@ -12,13 +12,6 @@ export class PeoplePageResponse {
   }
 }
 
-export interface PlanetResponse {
-  count: number;
-  next: string;
-  previous: string;
-  results: Planet[];
-}
-
 export interface PeoplePage {
   count: number;
   next: string;
@@ -45,9 +38,4 @@ export class PeopleResponse {
     this.gender = people.gender;
     this.homeWorld = people.homeworld;
   }
-}
-
-export interface Planet {
-  name: string;
-  population: string;
 }

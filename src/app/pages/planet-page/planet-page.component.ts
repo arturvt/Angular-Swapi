@@ -1,8 +1,8 @@
 import { formatNumber } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { take } from 'rxjs';
-import { Planet, PlanetResponse } from 'src/app/service/model';
 import { PlanetService } from '../../service/planet/planet.service';
+import { Planet, PlanetResponse } from '../../model/planet';
 
 @Component({
   selector: 'app-planet-page',

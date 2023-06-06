@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
 import { SwapiService } from '../swapi.service';
 import { map, Observable } from 'rxjs';
-import { People, PeoplePage, PeoplePageResponse, PeopleResponse } from '../model';
 import { HttpParams } from '@angular/common/http';
+import { People, PeoplePage, PeoplePageResponse, PeopleResponse } from '../../model/people';
 
 @Injectable({
   providedIn: 'root',

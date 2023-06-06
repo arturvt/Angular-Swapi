@@ -1,9 +1,8 @@
 import { Injectable } from '@angular/core';
-
 import { SwapiService } from '../swapi.service';
 import { Observable } from 'rxjs';
-import { PlanetResponse } from '../model';
 import { HttpParams } from '@angular/common/http';
+import { PlanetResponse } from '../../model/planet';
 
 @Injectable({
   providedIn: 'root',

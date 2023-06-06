@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { take } from 'rxjs';
-import { PeoplePageResponse, PeopleResponse } from 'src/app/service/model';
 import { PeopleService } from '../../service/people/people.service';
+import { PeoplePageResponse, PeopleResponse } from '../../model/people';
 
 @Component({
   templateUrl: './people.page.component.html',
