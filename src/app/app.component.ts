@@ -1,18 +1,14 @@
-import { AfterViewInit, Component } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
 })
-export class AppComponent implements AfterViewInit {
+export class AppComponent {
   title = 'angular-swapi';
 
-  ngAfterViewInit(): void {
-    console.log('[SWAPI]: Sending ready in 3 seconds');
-    setTimeout(() => {
-      console.log('[SWAPI]: Sending ready');
-      window.parent.postMessage({ type: 'ready', sender: 'subhub' }, '*');
-    }, 3000);
+  tabChanged(tabName: string) {
+    console.log(`tab changed to ${tabName}`);
   }
 }

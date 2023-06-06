@@ -1,14 +1,21 @@
-<h1>Planet content</h1>
-<div class="container">
-  <div class="row margin-bottom-1">
-    <sdx-button (click)="goBack()" label="goBack"></sdx-button>
-  </div>
-  <div class="row margin-bottom-1">
-    <sdx-button (click)="openWebSite('https://www.google.com')" label="open Google"></sdx-button>
-  </div>
-  <div class="row">
-    <sdx-button (click)="openWebSite('https://www.bing.com')" label="open Bing"></sdx-button>
-  </div>
+<ng-container *ngIf="planetResponse">
+  <div class="row flex-items">
+    <div class="col-xs-6 col-md-4 margin-bottom-3" *ngFor="let planet of planetContent">
+      <sdx-card [label]="planet.name" label-aria-level="2" icon-name="icon-home">
+        <ul class="list single-line margin-0">
+          <li>Population: {{ formatPopulation(planet)}}</li>
 
-</div>
+        </ul>
+      </sdx-card>
 
+    </div>
+  </div>
+  <sdx-show-more
+  *ngIf="isShowMoreVisible()"
+    [incrementBy]="incrementBy"
+    [totalItems]="planetResponse.count"
+    from-label="of"
+    more-label="Show 10 more"
+    (click)="showMore()"
+  />
+</ng-container>

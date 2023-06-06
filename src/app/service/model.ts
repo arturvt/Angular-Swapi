@@ -4,6 +4,13 @@ export interface PeopleResponse {
   previous: string;
   results: People[];
 }
+
+export interface PlanetResponse {
+  count: number;
+  next: string;
+  previous: string;
+  results: Planet[];
+}
 export interface People {
   name: string;
   gender: string;
@@ -12,10 +19,6 @@ export interface People {
 
 export interface Planet {
   name: string;
-  population: number;
+  population: string;
 }
 
-export interface Data {
-  people: PeopleResponse;
-  planets: Planet[];
-}

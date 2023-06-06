@@ -1,0 +1,28 @@
+<h1>Util content</h1>
+<div class="container buttons--action">
+  <h2 class="sc-red">Buttons with red class</h2>
+  <app-button-signal></app-button-signal>
+  <h2 class="buttons--title">Buttons</h2>
+  <div class="row margin-bottom-1">
+    <sdx-button (click)="goBack()" label="goBack"></sdx-button>
+  </div>
+  <div class="row margin-bottom-1">
+    <sdx-button (click)="openWebSite('https://www.google.com')" label="open Google"></sdx-button>
+  </div>
+  <div class="row margin-bottom-2">
+    <sdx-button (click)="openWebSite('https://www.bing.com')" label="open Bing"></sdx-button>
+  </div>
+  <div class="row margin-bottom-1">
+    <sdx-input label="Write the route" [value]="subHubUrl" [changeCallback]="updateUrl"></sdx-input>
+  </div>
+  <div class="row margin-bottom-1">
+    <sdx-input label="Write the branch" [value]="branch" [changeCallback]="updateBranch"></sdx-input>
+  </div>
+  <div class="row">
+    <p>Open:</p>
+    <p>{{urlLink}}</p>
+    <sdx-button label="Open Url" (click)="openWebSite(urlLink)"></sdx-button>
+  </div>
+
+</div>
+

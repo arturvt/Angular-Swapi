@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { take } from 'rxjs';
 import { People, PeopleResponse } from 'src/app/service/model';
-import { SwapiService } from 'src/app/service/swapi.service';
+import { PeopleService } from '../../service/people/people.service';
 
 @Component({
   templateUrl: './people.page.component.html',
@@ -13,7 +13,7 @@ export class PeoplePageComponent implements OnInit {
   peopleResponse!: PeopleResponse;
   peopleContent: People[] = [];
 
-  constructor(private swapiService: SwapiService) {}
+  constructor(private swapiService: PeopleService) {}
 
   ngOnInit(): void {
     this.loadPeople();

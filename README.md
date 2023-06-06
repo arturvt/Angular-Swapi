@@ -22,18 +22,18 @@ You can find the project here: https://swapi-app-5f4ac.web.app/
 ## TODO List
 
 - [ ]  Implement all APIs from SWAPI
-  - [ ]  People
-  - [ ]  Films
-  - [ ]  Planets
-  - [ ]  Vehicles
-  - [ ]  Starships
+- [X]  People
+- [X]  Films
+- [X]  Planets
+- [ ]  Vehicles
+- [ ]  Starships
 - [ ]  Add states to prevent unecessary requests
-  - [ ]  Apply the isLoading flag so loader will be visible from app.component
+- [ ]  Apply the isLoading flag so loader will be visible from app.component
 - [ ]  Use Firebase as Database
 - [ ]  Add Images
 - [ ]  Add Animations
 - [ ]  Tabs Concept
-  - [ ]  People
-  - [ ]  Planets
+- [ ]  People
+- [ ]  Planets
   - [ ]  Films
 - [ ] Try Angular Signals...
