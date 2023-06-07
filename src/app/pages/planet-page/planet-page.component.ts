@@ -2,7 +2,7 @@ import { formatNumber } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { take } from 'rxjs';
 import { PlanetService } from '../../service/planet/planet.service';
-import { Planet, PlanetResponse } from '../../model/planet';
+import { Planet, PlanetPage } from '../../model/planetResponse';
 
 @Component({
   selector: 'app-planet-page',
@@ -10,10 +10,12 @@ import { Planet, PlanetResponse } from '../../model/planet';
   styleUrls: ['./planet-page.component.scss'],
 })
 export class PlanetPageComponent implements OnInit {
-  constructor(private swapiService: PlanetService) {}
+  planetResponse!: PlanetPage;
+
   private currentPage = 1;
   incrementBy = 0;
-  planetResponse!: PlanetResponse;
+
+  constructor(private planetService: PlanetService) {}
   planetContent: Planet[] = [];
 
   ngOnInit(): void {
@@ -34,7 +36,7 @@ export class PlanetPageComponent implements OnInit {
   }
 
   private loadPlanets(): void {
-    this.swapiService
+    this.planetService
       .getPlanetsList(this.currentPage)
       .pipe(take(1))
       .subscribe((planetResponse) => {

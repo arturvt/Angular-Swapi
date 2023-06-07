@@ -14,6 +14,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FilmDetailsComponent } from './pages/film-page/film-details/film-details.component';
 import { RelaseDayUntilNowPipe } from './pages/film-page/film-details/pipe/relase-day-until-now.pipe';
 import { PeopleDetailsComponent } from './pages/people-page/people-details/people-details.component';
+import { PlanetDetailsComponent } from './pages/planet-page/planet-details/planet-details.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'people', pathMatch: 'full' },
@@ -34,7 +35,16 @@ const routes: Routes = [
   {
     path: 'planet',
     title: 'Swapi - Planet',
-    component: PlanetPageComponent,
+    children: [
+      {
+        path: '',
+        component: PlanetPageComponent,
+      },
+      {
+        path: ':id',
+        component: PlanetDetailsComponent,
+      },
+    ],
   },
   {
     path: 'film',
@@ -64,6 +74,7 @@ const routes: Routes = [
     FilmDetailsComponent,
     RelaseDayUntilNowPipe,
     PeopleDetailsComponent,
+    PlanetDetailsComponent,
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   imports: [BrowserModule, HttpClientModule, BrowserAnimationsModule, RouterModule.forRoot(routes), ButtonSignalComponent],

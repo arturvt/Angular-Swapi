@@ -4,7 +4,7 @@
       <sdx-card [label]="planet.name" label-aria-level="2" icon-name="icon-home">
         <ul class="list single-line margin-0">
           <li>Population: {{ formatPopulation(planet)}}</li>
-
+          <li class="list--link"><a href="javascript:;" routerLink="/planet/{{planet.id}}">Details</a></li>
         </ul>
       </sdx-card>
 

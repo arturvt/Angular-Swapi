@@ -1,0 +1,47 @@
+<ng-container *ngIf="planet">
+  <a href="javascript:;"
+  routerLink="/planet">
+    <sdx-icon icon-name="icon-arrow-left" class="sc-blue" size="3" sr-hint="Go back to planets"></sdx-icon>
+  </a>
+  <h1>{{planet.name}}</h1>
+  <div class="table-display">
+    <h2 class="table__title h2">Highlights</h2>
+    <div class="table__wrapper">
+      <div class="row">
+        <div class="col-xs-12 col-md-4">
+          Population
+        </div>
+        <div class="col-xs-12 col-md-8">
+          {{planet.population | number}}
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12 col-md-4">
+          Geography
+        </div>
+        <div class="col-xs-12 col-md-8">
+          <ul class="list single-line">
+            <li>Terrain: {{planet.terrain | titlecase}}</li>
+            <li>Climate: {{planet.climate | titlecase}}</li>
+            <li>Surface Water: {{planet.surfaceWater}}</li>
+            <li>Rotation period: {{planet.rotationPeriod}}</li>
+            <li>Orbital period: {{planet.orbitalPeriod}}</li>
+            <li>Gravity: {{planet.gravity}}</li>
+            <li>Diameter: {{planet.diameter | number}}</li>
+          </ul>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12 col-md-4">
+          Famous residents
+        </div>
+        <div class="col-xs-12 col-md-8">
+          <ul class="list single--line">
+            <li *ngFor="let resident of residentNames">{{resident}}</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</ng-container>
+
