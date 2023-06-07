@@ -55,7 +55,7 @@ describe('FilmService', () => {
   it('get film by film exist', (done) => {
     httpClientSpy.get.and.returnValue(of(twoFilmsResponse));
     expect(service).toBeTruthy();
-    // id doesn't exist
+    // Id exist
     service.getFilm(4).subscribe((film) => {
       expect(film).toBeTruthy();
       done();

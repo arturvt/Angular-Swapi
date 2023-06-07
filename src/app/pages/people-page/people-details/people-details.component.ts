@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
 import { PeopleService } from '../../../service/people/people.service';
 import { Observable } from 'rxjs';
 import { PeopleResponse } from '../../../model/peopleSwapi';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-people-details',

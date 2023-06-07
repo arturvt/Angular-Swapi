@@ -22,37 +22,24 @@ const routes: Routes = [
     path: 'people',
     title: 'Swapi - People',
     children: [
-      {
-        path: '',
-        component: PeoplePageComponent,
-      },
-      {
-        path: ':id',
-        component: PeopleDetailsComponent,
-      },
+      { path: '', component: PeoplePageComponent },
+      { path: ':id', component: PeopleDetailsComponent },
     ],
   },
   {
     path: 'planet',
     title: 'Swapi - Planet',
     children: [
-      {
-        path: '',
-        component: PlanetPageComponent,
-      },
-      {
-        path: ':id',
-        component: PlanetDetailsComponent,
-      },
+      { path: '', component: PlanetPageComponent },
+      { path: ':id', component: PlanetDetailsComponent, pathMatch: 'full' },
     ],
   },
   {
     path: 'film',
     title: 'Swapi - Film',
-    data: { animation: '3' },
     children: [
       { path: '', component: FilmPageComponent },
-      { path: ':episode_id', component: FilmDetailsComponent },
+      { path: ':id', component: FilmDetailsComponent, pathMatch: 'full' },
     ],
   },
   {
