@@ -10,7 +10,7 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./film-details.component.scss'],
 })
 export class FilmDetailsComponent {
-  film$: Observable<Film | undefined> = this.service.getFilm(this.activeRoute.snapshot.params['episode_id']);
+  film$: Observable<Film | undefined> = this.service.getFilm(this.activeRoute.snapshot.params['id']);
 
   constructor(private activeRoute: ActivatedRoute, private service: FilmService) {}
 }
