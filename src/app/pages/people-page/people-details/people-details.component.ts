@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { PeopleService } from '../../../service/people/people.service';
 import { Observable } from 'rxjs';
 import { ActivatedRoute } from '@angular/router';
-import { People } from 'src/app/model/peopleSwapi';
+import { People } from 'src/app/model/people';
 
 @Component({
   selector: 'app-people-details',

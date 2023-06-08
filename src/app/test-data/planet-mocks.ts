@@ -1,4 +1,4 @@
-import { PlanePageResponse, PlanetResponse } from '../model/planetResponse';
+import { PlanePageResponse, PlanetResponse } from '../model/planet';
 
 export const planet01: PlanetResponse = {
   name: 'Dagobah',

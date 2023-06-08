@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { SwapiService } from '../swapi.service';
 import { map, Observable } from 'rxjs';
 import { HttpParams } from '@angular/common/http';
-import { PlanePageResponse, PlanetDetails, PlanetPage, PlanetResponse } from '../../model/planetResponse';
+import { PlanePageResponse, PlanetDetails, PlanetPage, PlanetResponse } from '../../model/planet';
 
 @Injectable({
   providedIn: 'root',

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { PlanetService } from '../../../service/planet/planet.service';
-import { PlanetDetails } from '../../../model/planetResponse';
+import { PlanetDetails } from '../../../model/planet';
 import { PeopleService } from '../../../service/people/people.service';
 import { take } from 'rxjs';
 import { ActivatedRoute } from '@angular/router';

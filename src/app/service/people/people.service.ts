@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { SwapiService } from '../swapi.service';
 import { map, Observable, Subject } from 'rxjs';
 import { HttpParams } from '@angular/common/http';
-import { People, PeoplePage } from 'src/app/model/peopleSwapi';
+import { People, PeoplePage } from 'src/app/model/people';
 import { PeoplePageResponse, PeopleResponse } from '@libs/swapi';
 
 @Injectable({

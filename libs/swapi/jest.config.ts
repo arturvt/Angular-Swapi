@@ -1,6 +1,6 @@
 /* eslint-disable */
 export default {
-  displayName: 'libs-swapi',
+  displayName: 'swapi',
   preset: '../../jest.preset.js',
   setupFilesAfterEnv: ['<rootDir>/src/test-setup.ts'],
   coverageDirectory: '../../coverage/libs/swapi',

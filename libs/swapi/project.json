@@ -1,5 +1,5 @@
 {
-  "name": "libs-swapi",
+  "name": "swapi",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "libs/swapi/src",
   "prefix": "lib",

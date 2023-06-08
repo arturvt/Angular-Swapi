@@ -2,7 +2,7 @@ import { formatNumber } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { take } from 'rxjs';
 import { PlanetService } from '../../service/planet/planet.service';
-import { Planet, PlanetPage } from '../../model/planetResponse';
+import { Planet, PlanetPage } from '../../model/planet';
 
 @Component({
   selector: 'app-planet-page',
