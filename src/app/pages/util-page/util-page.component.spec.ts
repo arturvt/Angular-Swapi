@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { UtilPageComponent } from './util-page.component';
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
 describe('UtilPageComponent', () => {
   let component: UtilPageComponent;
@@ -8,7 +9,8 @@ describe('UtilPageComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [UtilPageComponent]
+      declarations: [UtilPageComponent],
+      schemas: [CUSTOM_ELEMENTS_SCHEMA],
     });
     fixture = TestBed.createComponent(UtilPageComponent);
     component = fixture.componentInstance;

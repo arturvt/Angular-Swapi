@@ -10,7 +10,7 @@ import { PlanePageResponse, PlanetDetails, PlanetPage, PlanetResponse } from '..
 export class PlanetService extends SwapiService {
   private readonly planetsUrl = `${this.host}/planets`;
 
-  getPlanetsList(page: number): Observable<PlanetPage> {
+  getPagePlanet(page: number): Observable<PlanetPage> {
     const options = page ? { params: new HttpParams().set('page', page) } : {};
     return this.httpClient.get<PlanePageResponse>(this.planetsUrl, options).pipe(map((planetPage) => new PlanetPage(planetPage)));
   }

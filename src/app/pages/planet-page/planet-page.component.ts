@@ -37,7 +37,7 @@ export class PlanetPageComponent implements OnInit {
 
   private loadPlanets(): void {
     this.planetService
-      .getPlanetsList(this.currentPage)
+      .getPagePlanet(this.currentPage)
       .pipe(take(1))
       .subscribe((planetResponse) => {
         this.incrementBy += planetResponse.results.length;
