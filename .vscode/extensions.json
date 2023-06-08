@@ -3,5 +3,7 @@
     "angular.ng-template",
     "esbenp.prettier-vscode",
     "ms-vscode.vscode-typescript-next",
+    "nrwl.angular-console",
+    "dbaeumer.vscode-eslint"
   ]
 }
