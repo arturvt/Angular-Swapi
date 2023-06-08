@@ -15,6 +15,9 @@ import { FilmDetailsComponent } from './pages/film-page/film-details/film-detail
 import { RelaseDayUntilNowPipe } from './pages/film-page/film-details/pipe/relase-day-until-now.pipe';
 import { PeopleDetailsComponent } from './pages/people-page/people-details/people-details.component';
 import { PlanetDetailsComponent } from './pages/planet-page/planet-details/planet-details.component';
+import { StoreModule } from '@ngrx/store';
+import { EffectsModule } from '@ngrx/effects';
+import { StoreRouterConnectingModule } from '@ngrx/router-store';
 
 const routes: Routes = [
   { path: '', redirectTo: 'people', pathMatch: 'full' },
@@ -64,7 +67,25 @@ const routes: Routes = [
     PlanetDetailsComponent,
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
-  imports: [BrowserModule, HttpClientModule, BrowserAnimationsModule, RouterModule.forRoot(routes), ButtonSignalComponent],
+  imports: [
+    BrowserModule,
+    HttpClientModule,
+    BrowserAnimationsModule,
+    RouterModule.forRoot(routes),
+    ButtonSignalComponent,
+    StoreModule.forRoot(
+      {},
+      {
+        metaReducers: [],
+        runtimeChecks: {
+          strictActionImmutability: true,
+          strictStateImmutability: true,
+        },
+      }
+    ),
+    EffectsModule.forRoot([]),
+    StoreRouterConnectingModule.forRoot(),
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })
