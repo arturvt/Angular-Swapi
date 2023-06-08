@@ -2,7 +2,8 @@ import { Injectable } from '@angular/core';
 import { SwapiService } from '../swapi.service';
 import { map, Observable, Subject } from 'rxjs';
 import { HttpParams } from '@angular/common/http';
-import { PeoplePageResponse, PeoplePageSwapi, PeopleResponse, PeopleSwapi } from '../../model/peopleSwapi';
+import { People, PeoplePage } from 'src/app/model/peopleSwapi';
+import { PeoplePageResponse, PeopleResponse } from '@libs/swapi';
 
 @Injectable({
   providedIn: 'root',
@@ -10,13 +11,13 @@ import { PeoplePageResponse, PeoplePageSwapi, PeopleResponse, PeopleSwapi } from
 export class PeopleService extends SwapiService {
   private readonly peopleUrl = `${this.host}/people`;
 
-  getPeopleList(page: number): Observable<PeoplePageResponse> {
+  getPeopleList(page: number): Observable<PeoplePage> {
     const options = page ? { params: new HttpParams().set('page', page) } : {};
-    return this.httpClient.get<PeoplePageSwapi>(this.peopleUrl, options).pipe(map((peoplePage) => new PeoplePageResponse(peoplePage)));
+    return this.httpClient.get<PeoplePageResponse>(this.peopleUrl, options).pipe(map((peoplePage) => new PeoplePage(peoplePage)));
   }
 
-  getPeople(id: number): Observable<PeopleResponse> {
-    return this.httpClient.get<PeopleSwapi>(`${this.peopleUrl}/${id}`).pipe(map((people: PeopleSwapi) => new PeopleResponse(people)));
+  getPeople(id: number): Observable<People> {
+    return this.httpClient.get<PeopleResponse>(`${this.peopleUrl}/${id}`).pipe(map((people: PeopleResponse) => new People(people)));
   }
 
   getPeopleNames(ids: number[]): Observable<string> {

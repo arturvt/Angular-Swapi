@@ -1,40 +1,25 @@
-// --- Swapi Models ---
-export interface PeoplePageSwapi {
+import { PeoplePageResponse, PeopleResponse } from '@libs/swapi';
+export class PeoplePage {
   count: number;
   next: string;
   previous: string;
-  results: PeopleSwapi[];
-}
+  results: People[];
 
-export interface PeopleSwapi {
-  name: string;
-  gender: string;
-  homeworld: string;
-  url: string;
-}
-
-// --- App Models -----
-export class PeoplePageResponse {
-  count: number;
-  next: string;
-  previous: string;
-  results: PeopleResponse[];
-
-  constructor(peoplePage: PeoplePageSwapi) {
+  constructor(peoplePage: PeoplePageResponse) {
     this.count = peoplePage.count;
     this.next = peoplePage.next;
     this.previous = peoplePage.previous;
-    this.results = peoplePage.results.map((people) => new PeopleResponse(people));
+    this.results = peoplePage.results.map((people) => new People(people));
   }
 }
 
-export class PeopleResponse {
+export class People {
   id: string;
   name: string;
   gender: string;
   homeWorld: string;
 
-  constructor(people: PeopleSwapi) {
+  constructor(people: PeopleResponse) {
     this.id = people.url.replace(/[^0-9]/g, '');
     this.name = people.name;
     this.gender = people.gender;

@@ -1,7 +1,8 @@
 import { Injectable } from '@angular/core';
 import { SwapiService } from '../swapi.service';
 import { map, Observable, shareReplay } from 'rxjs';
-import { Film, FilmContentResponse, FilmResponse } from '../../model/film';
+import { Film } from '../../model/film';
+import { FilmResponse, FilmContentResponse } from '@libs/swapi';
 
 @Injectable({
   providedIn: 'root',
