@@ -1,4 +1,4 @@
-import { FilmContentResponse, FilmResponse } from '../model/film';
+import { FilmContentResponse, FilmResponse } from '@libs/swapi';
 
 export const film01: FilmContentResponse = {
   title: 'A New Hope',
