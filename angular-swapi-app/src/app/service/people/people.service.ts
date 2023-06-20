@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { SwapiService } from '../swapi.service';
 import { map, Observable, Subject } from 'rxjs';
 import { HttpParams } from '@angular/common/http';
-import { People, PeoplePage } from 'src/app/model/people';
+import { People, PeoplePage } from '../../model/people';
 import { PeoplePageResponse, PeopleResponse } from '@libs/swapi';
 
 @Injectable({
@@ -12,6 +12,7 @@ export class PeopleService extends SwapiService {
   private readonly peopleUrl = `${this.host}/people`;
 
   getPeopleList(page: number): Observable<PeoplePage> {
+    console.log(`peopleUlr: ${this.peopleUrl}`);
     const options = page ? { params: new HttpParams().set('page', page) } : {};
     return this.httpClient.get<PeoplePageResponse>(this.peopleUrl, options).pipe(map((peoplePage) => new PeoplePage(peoplePage)));
   }
