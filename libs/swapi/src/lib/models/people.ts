@@ -9,5 +9,6 @@ export interface PeopleResponse {
   name: string;
   gender: string;
   homeworld: string;
+  birth_year: string;
   url: string;
 }

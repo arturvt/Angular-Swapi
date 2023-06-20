@@ -1,4 +1,5 @@
 import { PeoplePageResponse, PeopleResponse } from '@libs/swapi';
+
 export class PeoplePage {
   count: number;
   next: string;
@@ -17,12 +18,14 @@ export class People {
   id: string;
   name: string;
   gender: string;
+  birthYear: string;
   homeWorld: string;
 
   constructor(people: PeopleResponse) {
     this.id = people.url.replace(/[^0-9]/g, '');
     this.name = people.name;
     this.gender = people.gender;
-    this.homeWorld = people.homeworld;
+    this.homeWorld = people.homeworld.replace(/[^0-9]/g, '');
+    this.birthYear = people.birth_year;
   }
 }

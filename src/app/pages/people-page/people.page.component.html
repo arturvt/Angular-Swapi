@@ -4,7 +4,8 @@
       <sdx-card [label]="people.name" icon-name="icon-person" label-aria-level="2">
         <ul class="list single-line margin-0">
           <li>Gender: {{ people.gender }}</li>
-          <li class="list--link"><a href="{{ people.homeWorld }}">Homeworld</a></li>
+          <li>Birth: {{ people.birthYear }}</li>
+          <li class="list--link"><a href="javascript:;" routerLink="/planet/{{people.homeWorld}}">Home planet</a></li>
           <li class="list--link"><a href="javascript:;" routerLink="/people/{{people.id}}">Details</a></li>
         </ul>
       </sdx-card>
