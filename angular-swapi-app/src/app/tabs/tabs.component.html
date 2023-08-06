@@ -1,6 +1,7 @@
-<sdx-tabs class="container" [changeCallback]="tabClick">
-  <sdx-tabs-item [selected]="isSelected('people')"  label="People" tab-id="people" icon-name="icon-person" />
-  <sdx-tabs-item [selected]="isSelected('planet')" label="Planets" tab-id="planet" icon-name="icon-globe" />
-  <sdx-tabs-item [selected]="isSelected('film')" label="Films" tab-id="film" icon-name="icon-movie" />
-  <sdx-tabs-item [selected]="isSelected('util')" label="Extra" tab-id="util" icon-name="icon-gears" />
+<sdx-tabs [changeCallback]="tabClick" class="container" data-test-selector="tabs">
+  <sdx-tabs-item [selected]="isSelected('people')" icon-name="icon-person" label="People" tab-id="people"/>
+  <sdx-tabs-item [selected]="isSelected('planet')" icon-name="icon-globe" label="Planets" tab-id="planet"/>
+  <sdx-tabs-item [selected]="isSelected('film')" icon-name="icon-movie" label="Films" tab-id="film"/>
+  <sdx-tabs-item [selected]="isSelected('util')" icon-name="icon-gears" label="Extra" tab-id="util"/>
+  <sdx-tabs-item [selected]="isSelected('update')" icon-name="icon-gears" label="Update" tab-id="update"/>
 </sdx-tabs>

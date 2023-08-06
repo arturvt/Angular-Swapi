@@ -1,13 +1,22 @@
-import { getGreeting } from '../support/app.po';
+import { getTab, getPeopleCard } from '../support/app.po';
 
 describe('angular-swapi-app', () => {
   beforeEach(() => cy.visit('/'));
 
-  it('should display welcome message', () => {
+  it('Should start on People page', () => {
     // Custom command example, see `../support/commands.ts` file
-    cy.login('my-email@something.com', 'myPassword');
+    getTab().should('be.visible');
+    getPeopleCard().should('be.visible').should('have.length', 10);
+  });
 
-    // Function helper example, see `../support/app.po.ts` file
-    getGreeting().contains('Welcome angular-swapi-app');
+  it('click on People goes to details', () => {
+    {
+      getPeopleCard()
+        .first()
+        .within((element) => {
+          cy.wrap(element).get("[data-test-selector='people-details']").click();
+        });
+      cy.get('h1').contains('Luke Skywalker');
+    }
   });
 });

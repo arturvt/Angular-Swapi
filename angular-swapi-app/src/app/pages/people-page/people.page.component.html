@@ -1,12 +1,12 @@
 <ng-container *ngIf="peopleResponse">
   <div class="row flex-items">
     <div class="col-xs-6 col-md-4 margin-bottom-3" *ngFor="let people of peopleContent">
-      <sdx-card [label]="people.name" icon-name="icon-person" label-aria-level="2">
+      <sdx-card [label]="people.name" icon-name="icon-person" label-aria-level="2" data-test-selector="people-card">
         <ul class="list single-line margin-0">
           <li>Gender: {{ people.gender }}</li>
           <li>Birth: {{ people.birthYear }}</li>
-          <li class="list--link"><a href="javascript:;" routerLink="/planet/{{people.homeWorld}}">Home planet</a></li>
-          <li class="list--link"><a href="javascript:;" routerLink="/people/{{people.id}}">Details</a></li>
+          <li class="list--link"><a data-test-selector="people-home-world" href="javascript:;" routerLink="/planet/{{people.homeWorld}}">Home planet</a></li>
+          <li class="list--link"><a data-test-selector="people-details" href="javascript:;" routerLink="/people/{{people.id}}">Details</a></li>
         </ul>
       </sdx-card>
     </div>

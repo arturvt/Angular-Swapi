@@ -1,0 +1,3 @@
+<sdx-input-group type="radio"label="ID Check Level:" [changeCallback]="updated" inline >
+  <sdx-input-item *ngFor="let input of inputChecks" [value]="input.value" [checked]="input.checked">{{input.label}}</sdx-input-item>
+</sdx-input-group>

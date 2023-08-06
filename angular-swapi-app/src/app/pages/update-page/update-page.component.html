@@ -1,0 +1,52 @@
+<h1>Update Character</h1>
+
+<form class="paragraph" [formGroup]="characterForm" (ngSubmit)="onSubmit()">
+  <div class="row margin-bottom-3">
+    <div class="col-md-6 col-lg-6 padding-right-3">
+      <div class="row">
+        <sdx-input label="Name" placeholder="Person Name" type="text" ngDefaultControl [formControlName]="'name'"></sdx-input>
+      </div>
+      <div class="row">
+        <sdx-input label="Height" placeholder="Person height" type="number" ngDefaultControl formControlName="height"></sdx-input>
+      </div>
+
+      <div class="row">
+        <sdx-input label="Gender" placeholder="Person gender" type="text" ngDefaultControl formControlName="gender"> </sdx-input>
+      </div>
+    </div>
+    <div class="col-md-6 col-lg-6" formGroupName="homeWorld">
+      <div class="row">
+        <sdx-input label="Planet's name" placeholder="Person planet" type="text" ngDefaultControl formControlName="name"></sdx-input>
+        <sdx-input
+          label="Planet's Population"
+          placeholder="Person Population"
+          type="number"
+          ngDefaultControl
+          formControlName="population"
+        ></sdx-input>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6 col-lg-6">
+      <sdx-button label="Fill Person" (click)="fillPerson()"></sdx-button>
+    </div>
+    <div class="col-md-6 col-lg-6">
+      <sdx-button label="Fill planet" (click)="fillPlanet()"></sdx-button>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6 col-lg-6">
+      <sdx-button type="submit" label="Update" [disabled]="characterForm.invalid"></sdx-button>
+    </div>
+    <div class="col-md-6 col-lg-6">
+      <sdx-button label="Auto Fill" (click)="populate()"></sdx-button>
+    </div>
+  </div>
+  <div class="row">
+    <p>Form Status: {{ characterForm.status }}</p>
+    <p>Form Status: {{ characterForm.value | json }}</p>
+  </div>
+</form>
+
+<app-people-update-form></app-people-update-form>

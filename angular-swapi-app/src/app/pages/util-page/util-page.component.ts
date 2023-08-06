@@ -8,6 +8,7 @@ export class UtilPageComponent {
   host = 'https://www.swisscom.ch';
   subHubUrl = '/subhub/?subhublive=';
   branch = 'feature-OCEWLINE-23929-send-events-to-my-swisscom-app';
+  selectedOption: string;
 
   get urlLink(): string {
     return `${this.host}${this.subHubUrl}${this.branch}`;
@@ -37,5 +38,10 @@ export class UtilPageComponent {
       },
       '*'
     );
+  }
+
+  onUpdate(val: string) {
+    console.log(`update now I have ${val}`);
+    this.selectedOption = val;
   }
 }

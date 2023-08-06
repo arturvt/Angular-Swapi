@@ -9,7 +9,7 @@ import { PlanetPageComponent } from './pages/planet-page/planet-page.component';
 import { UtilPageComponent } from './pages/util-page/util-page.component';
 import { ButtonSignalComponent } from './components/button-signal.component';
 import { FilmPageComponent } from './pages/film-page/film-page.component';
-import { RouterModule, Routes } from '@angular/router';
+import { RouterModule } from '@angular/router';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FilmDetailsComponent } from './pages/film-page/film-details/film-details.component';
 import { RelaseDayUntilNowPipe } from './pages/film-page/film-details/pipe/relase-day-until-now.pipe';
@@ -19,6 +19,7 @@ import { StoreModule } from '@ngrx/store';
 import { EffectsModule } from '@ngrx/effects';
 import { StoreRouterConnectingModule } from '@ngrx/router-store';
 import { routes } from './app.routes';
+import { CheckSelectorComponent } from './pages/update-page/components/check-selector/check-selector.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import { routes } from './app.routes';
     RelaseDayUntilNowPipe,
     PeopleDetailsComponent,
     PlanetDetailsComponent,
+    CheckSelectorComponent,
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   imports: [

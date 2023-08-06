@@ -7,7 +7,7 @@ import { SwapiFacade } from '@libs/swapi';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent implements OnInit {
-  title = 'angular-swapi';
+  title = 'angular-swapi-app';
 
   constructor(private swapiFacade: SwapiFacade) {}
 

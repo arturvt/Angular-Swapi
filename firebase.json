@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "public": "dist/angular-swapi",
+    "public": "dist/angular-swapi-app",
     "ignore": [
       "firebase.json",
       "**/.*",
