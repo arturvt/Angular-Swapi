@@ -12,7 +12,8 @@ export class AppComponent implements OnInit {
   constructor(private swapiFacade: SwapiFacade) {}
 
   ngOnInit(): void {
-    console.log('Init facade');
+    console.log('Init App Component');
+    console.log('Init Swapi Facade');
     this.swapiFacade.init();
   }
 
