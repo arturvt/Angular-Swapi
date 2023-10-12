@@ -36,7 +36,7 @@ export const routes: Routes = [
   {
     path: 'util',
     title: 'Swapi - Util',
-    component: UtilPageComponent,
+    loadChildren: () => import('./pages/util-page/util-page.module').then((m) => m.UtilPageModule),
   },
   {
     path: 'update',

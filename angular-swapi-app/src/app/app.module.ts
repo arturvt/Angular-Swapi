@@ -6,7 +6,6 @@ import { HeaderComponent } from './header/header.component';
 import { TabsComponent } from './tabs/tabs.component';
 import { PeoplePageComponent } from './pages/people-page/people.page.component';
 import { PlanetPageComponent } from './pages/planet-page/planet-page.component';
-import { UtilPageComponent } from './pages/util-page/util-page.component';
 import { ButtonSignalComponent } from './components/button-signal.component';
 import { FilmPageComponent } from './pages/film-page/film-page.component';
 import { RouterModule } from '@angular/router';
@@ -20,7 +19,7 @@ import { EffectsModule } from '@ngrx/effects';
 import { StoreRouterConnectingModule } from '@ngrx/router-store';
 import { routes } from './app.routes';
 import { CheckSelectorComponent } from './pages/update-page/components/check-selector/check-selector.component';
-
+import { OrderSelectorComponent } from './pages/util-page/components/order-selector/order-selector.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,7 +27,7 @@ import { CheckSelectorComponent } from './pages/update-page/components/check-sel
     TabsComponent,
     PlanetPageComponent,
     HeaderComponent,
-    UtilPageComponent,
+
     FilmPageComponent,
     FilmDetailsComponent,
     RelaseDayUntilNowPipe,
