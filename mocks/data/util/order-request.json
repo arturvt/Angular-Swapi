@@ -1,0 +1,52 @@
+{
+  "id": "1234567890",
+  "title": "Your product order",
+  "status": "OPEN",
+  "updated": "2023-08-20T12:00:00Z",
+  "steps": [
+    {
+      "title": "Order received",
+      "content": {
+        "description": "Your order has been received",
+        "url": "https://www.swisscom.ch/en/residential/help/internet/internet-box-4.html",
+        "type": "DOCUMENT_PDF"
+      },
+      "status": "COMPLETED",
+      "updated": "2023-08-22T12:00:00Z"
+    },
+    {
+      "title": "Order shipped",
+      "content": {
+        "description": "Your order has been shipped",
+        "url": "https://www.swisscom.ch/en/residential/help/internet/internet-box-4.html",
+        "type": "POST_TRACKING"
+      },
+      "status": "OPEN",
+      "updated": "2023-08-23T12:00:00Z"
+    },
+    {
+      "title": "Order delivered",
+      "content": {
+        "description": "Your order has been delivered",
+        "type": "TEXT"
+      },
+      "status": "NOT_STARTED",
+      "updated": "2023-08-24T12:00:00Z"
+    },
+    {
+      "title": "Installing your box",
+      "content": {
+        "description": "Start Installation Guide",
+        "url": "https://www.swisscom.ch/en/residential/help/internet/internet-box-4.html",
+        "type": "URL"
+      },
+      "status": "NOT_STARTED",
+      "updated": "2023-08-25T12:00:00Z"
+    },
+    {
+      "title": "Installation Completed",
+      "status": "NOT_STARTED",
+      "updated": "2023-08-27T12:00:00Z"
+    }
+  ]
+}

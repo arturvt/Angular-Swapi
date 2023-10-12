@@ -30,10 +30,10 @@ You can find the project here: https://swapi-app-5f4ac.web.app/
 - [ ]  Add states to prevent unecessary requests
 - [ ]  Apply the isLoading flag so loader will be visible from app.component
 - [ ]  Use Firebase as Database
-- [ ]  Add Images
+- [X]  Add Images
 - [ ]  Add Animations
-- [ ]  Tabs Concept
-- [ ]  People
-- [ ]  Planets
-  - [ ]  Films
+- [x]  Tabs Concept
+- [x]  People
+- [x]  Planets
+- [x]  Films
 - [ ] Try Angular Signals...

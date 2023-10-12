@@ -1,63 +1,6 @@
 <div class="util" id="util-page">
-  <h1>Util content</h1>
-
-  <div class="margin-bottom-3">
-    <app-check-selector (selectedOption)="onUpdate($event)"></app-check-selector>
+  <h1>Util content!</h1>
+  <div class="margin-top-3">
+    <app-order-selector></app-order-selector>
   </div>
-
-
-  <!--  <h2>Modal</h2>-->
-  <!--  <sdx-dialog-->
-  <!--    data-test-selector="closable-modal-example"-->
-  <!--    display-change-callback="-->
-  <!--    if (arguments[0] === 'open') document.querySelector('#first-input-element').doFocus();-->
-  <!--    if (arguments[0] === 'closing') document.querySelector('#closable-modal-opener').doFocus();-->
-  <!--  "-->
-  <!--    id="closable-modal-example"-->
-  <!--    label="Call back now"-->
-  <!--    type="closable-modal"-->
-  <!--  >-->
-  <!--    <sdx-dialog-toggle>-->
-  <!--      <sdx-button id="closable-modal-opener" label="Open closable modal"></sdx-button>-->
-  <!--    </sdx-dialog-toggle>-->
-
-  <!--    <sdx-dialog-content>-->
-  <!--      <p>We will be happy to put you through to one of our employees now.</p>-->
-  <!--      <p>-->
-  <!--        <sdx-input id="first-input-element" label="How can we contact you by phone?"></sdx-input>-->
-  <!--      </p>-->
-
-  <!--      <sdx-button-group>-->
-  <!--        <sdx-button label="Call back now"></sdx-button>-->
-  <!--        <sdx-button label="Cancel" onclick="document.getElementById('closable-modal-example').close()"-->
-  <!--                    theme="secondary"></sdx-button>-->
-  <!--      </sdx-button-group>-->
-  <!--    </sdx-dialog-content>-->
-  <!--  </sdx-dialog>-->
-
-  <!--  <div class="container buttons&#45;&#45;action">-->
-  <!--    <h2 class="sc-red">Buttons with red class</h2>-->
-  <!--    <app-button-signal></app-button-signal>-->
-  <!--    <h2 class="buttons&#45;&#45;title">Buttons</h2>-->
-  <!--    <div class="row margin-bottom-1">-->
-  <!--      <sdx-button (click)="goBack()" label="goBack"></sdx-button>-->
-  <!--    </div>-->
-  <!--    <div class="row margin-bottom-1">-->
-  <!--      <sdx-button (click)="openWebSite('https://www.google.com')" label="open Google"></sdx-button>-->
-  <!--    </div>-->
-  <!--    <div class="row margin-bottom-2">-->
-  <!--      <sdx-button (click)="openWebSite('https://www.bing.com')" label="open Bing"></sdx-button>-->
-  <!--    </div>-->
-  <!--    <div class="row margin-bottom-1">-->
-  <!--      <sdx-input [changeCallback]="updateUrl" [value]="subHubUrl" label="Write the route"></sdx-input>-->
-  <!--    </div>-->
-  <!--    <div class="row margin-bottom-1">-->
-  <!--      <sdx-input [changeCallback]="updateBranch" [value]="branch" label="Write the branch"></sdx-input>-->
-  <!--    </div>-->
-  <!--    <div class="row">-->
-  <!--      <p>Open:</p>-->
-  <!--      <p>{{ urlLink }}</p>-->
-  <!--      <sdx-button (click)="openWebSite(urlLink)" label="Open Url"></sdx-button>-->
-  <!--    </div>-->
-  <!--  </div>-->
 </div>
