@@ -2,16 +2,21 @@
   <div class="row flex-items">
     <div class="col-xs-6 col-md-4 margin-bottom-3" *ngFor="let planet of planetContent">
       <sdx-card [label]="planet.name" label-aria-level="2" icon-name="icon-home">
-        <ul class="list single-line margin-0">
-          <li>Population: {{ formatPopulation(planet)}}</li>
-          <li class="list--link"><a href="javascript:;" routerLink="/planet/{{planet.id}}">Details</a></li>
+        <ul class="list single-line margin-bottom-1">
+          <li>Population: {{ formatPopulation(planet) }}</li>
+          <li class="list--link"><a href="javascript:;" routerLink="/planet/{{ planet.id }}">Details link</a></li>
         </ul>
       </sdx-card>
-
     </div>
   </div>
+
+  <sdx-card label="Title" label-aria-level="2">
+    <ul class="list single-line margin-0">
+      <li class="list--link"><a href="javascript:;">Link 3</a></li>
+    </ul>
+  </sdx-card>
   <sdx-show-more
-  *ngIf="isShowMoreVisible()"
+    *ngIf="isShowMoreVisible()"
     [incrementBy]="incrementBy"
     [totalItems]="planetResponse.count"
     from-label="of"

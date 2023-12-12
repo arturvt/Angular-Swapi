@@ -20,6 +20,7 @@ import { StoreRouterConnectingModule } from '@ngrx/router-store';
 import { routes } from './app.routes';
 import { CheckSelectorComponent } from './pages/update-page/components/check-selector/check-selector.component';
 import { OrderSelectorComponent } from './pages/util-page/components/order-selector/order-selector.component';
+import { CardInfoComponent } from './components/card-info/card-info.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -34,6 +35,7 @@ import { OrderSelectorComponent } from './pages/util-page/components/order-selec
     PeopleDetailsComponent,
     PlanetDetailsComponent,
     CheckSelectorComponent,
+    CardInfoComponent,
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   imports: [
